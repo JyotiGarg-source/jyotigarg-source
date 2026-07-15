@@ -109,6 +109,45 @@ a{
 a:hover{
     text-decoration:underline;
 }
+    /* Navbar */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: rgba(15,23,42,0.95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
 
 </style>
 <nav class="navbar">
@@ -132,7 +171,7 @@ a:hover{
 
 <body>
 
-<header>
+<header id="home">
 
 <h1>Jyoti Garg</h1>
 
@@ -153,7 +192,7 @@ View Portfolio
 
 </header>
 
-<section>
+<section id="about">
 
 <h3>About Me</h3>
 
