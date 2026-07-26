@@ -168,11 +168,17 @@ header h2{
 
 section{
 
-    max-width:1100px;
+   max-width:1100px;
 
     margin:auto;
 
-    padding:70px 20px;
+    padding:45px 10px;
+
+}
+
+section[id]{
+
+    scroll-margin-top:50px;
 
 }
 
@@ -188,6 +194,12 @@ h3{
 }
 
 
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 
 /* ---------- Cards ---------- */
 
@@ -196,7 +208,7 @@ h3{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
 
     gap:20px;
 
@@ -220,6 +232,16 @@ h3{
 .card:hover{
 
     transform:translateY(-6px);
+
+}
+
+.card h4{
+
+    color:#60a5fa;
+
+    margin-bottom:20px;
+
+    font-size:20px;
 
 }
 
@@ -263,13 +285,21 @@ footer{
 /* ---------- Mobile ---------- */
 
 
-@media(max-width:768px){
+@media(max-width:768px)
+{
 
 
 .navbar{
 
-    flex-direction:column;
+ position:fixed;
 
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
 }
 
 
@@ -293,6 +323,430 @@ header h1{
 
 }
 
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.experience-header h4 {
+    margin: 0;
+}
+
+.experience-header span {
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+
+/* ---------- Skill Badges ---------- */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:25px;
+}
+
+.skill-badge{
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    border:1px solid #3b82f6;
+
+    font-size:15px;
+
+    transition:0.3s;
+
+}
+
+.skill-badge:hover{
+
+    background:#172033;
+
+    transform:translateY(-3px);
+
+    cursor:default;
+
+}
+
+/* ---------- Certifications ---------- */
+
+.cert-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    transition:0.3s;
+
+}
+
+.cert-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#3b82f6;
+
+}
+
+.cert-card h4{
+
+    color:#60a5fa;
+
+    margin-bottom:12px;
+
+    font-size:20px;
+
+}
+
+.cert-org{
+
+    color:#cbd5e1;
+
+    margin-bottom:8px;
+
+}
+
+.cert-year{
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+}
+
+.cert-btn{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    transition:0.3s;
+
+}
+
+.cert-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ---------- Contact ---------- */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+.contact-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    transition:0.3s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#3b82f6;
+
+}
+
+.contact-card h4{
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+    color:#cbd5e1;
+
+    word-break:break-word;
+
+}
+
+.contact-card a{
+
+    color:#ffffff;
+
+}
+
+.contact-card a:hover{
+
+    color:#60a5fa;
+
+}
+
+/* ---------- Modern Experience Timeline ---------- */
+
+.experience-timeline{
+
+    border-left:2px solid #334155;
+
+    padding-left:35px;
+
+}
+
+
+.experience-item{
+
+    position:relative;
+
+    margin-bottom:50px;
+
+}
+
+
+.experience-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-43px;
+
+    top:8px;
+
+    width:14px;
+
+    height:14px;
+
+    background:#2563eb;
+
+    border-radius:50%;
+
+}
+
+
+.experience-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    margin-bottom:8px;
+
+}
+
+
+.experience-header h4{
+
+    font-size:24px;
+
+    color:white;
+
+}
+
+
+.experience-date{
+
+    color:#60a5fa;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+
+.company{
+
+    color:#cbd5e1;
+
+    font-size:17px;
+
+    margin-bottom:15px;
+
+}
+
+
+.experience-item ul{
+
+    padding-left:20px;
+
+}
+
+
+.experience-item li{
+
+    margin-bottom:8px;
+
+    color:#e2e8f0;
+
+}
+
+
+.tools{
+
+    margin-top:15px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+
+/* ---------- Projects ---------- */
+
+
+.project-item{
+
+    padding:25px 0;
+
+    border-bottom:1px solid #334155;
+
+}
+
+
+.project-item h4{
+
+    color:#60a5fa;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+.project-item p{
+
+    color:#cbd5e1;
+
+    max-width:800px;
+
+}
+
+
+.project-tools{
+
+    color:#94a3b8;
+
+    margin-top:10px;
+
+    font-size:14px;
+
+}
+
+/* ---------- Documentation Portfolio ---------- */
+
+.work-section{
+
+    margin-top:20px;
+
+}
+
+
+.work-item{
+
+    padding:30px 0;
+
+    border-bottom:1px solid #334155;
+
+}
+
+
+.work-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+.work-item h4{
+
+    color:#60a5fa;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+
+.work-item p{
+
+    color:#cbd5e1;
+
+    max-width:850px;
+
+    margin-bottom:15px;
+
+}
+
+
+.work-meta{
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+.work-link{
+
+    display:inline-block;
+
+    color:#60a5fa;
+
+    font-weight:bold;
+
+}
+
+
+.work-link:hover{
+
+    color:white;
+
+}
+
 
 </style>
 
@@ -310,26 +764,14 @@ header h1{
 
 
 <div class="logo">
-Jyoti Garg
+<a href="#about">Jyoti Garg</a>
 </div>
-
-
 
 <ul class="nav-links">
 
 
 <li>
-<a href="#home">Home</a>
-</li>
-
-
-<li>
-<a href="#about">About</a>
-</li>
-
-
-<li>
-<a href="#skills">Skills</a>
+<a href="#summary">Summary</a>
 </li>
 
 
@@ -339,13 +781,19 @@ Jyoti Garg
 
 
 <li>
-<a href="#portfolio">Portfolio</a>
+<a href="#projects">Projects</a>
 </li>
 
 
 <li>
-<a href="#certifications">Certifications</a>
+<a href="#mywork">My Work</a>
 </li>
+
+
+<li>
+<a href="#education">Education</a>
+</li>
+
 
 
 <li>
@@ -353,11 +801,11 @@ Jyoti Garg
 </li>
 
 
-<li>
+<!-- <li>
 <a class="resume-btn" href="#">
 Resume
 </a>
-</li>
+</li> -->
 
 
 </ul>
@@ -365,13 +813,10 @@ Resume
 
 </nav>
 
-
-
-
 <!-- HERO -->
 
 
-<header id="home">
+<header id="about">
 
 
 <h1>
@@ -385,9 +830,7 @@ Senior Technical Writer | AI Documentation Specialist | API Documentation
 
 
 <p>
-
-Helping software and AI companies create clear developer documentation,
-API documentation, user guides and knowledge bases.
+Transforming complex software and AI concepts into clear, user-friendly documentation that helps developers build faster and users succeed.
 
 </p>
 
@@ -395,207 +838,78 @@ API documentation, user guides and knowledge bases.
 <br>
 
 
-<a class="button" href="#">
+<!-- <a class="button" href="#">
 Download Resume
-</a>
+</a> -->
 
 
 
-<a class="button" href="https://github.com/JyotiGarg-source/Technical-Writing-Portfolio" target="_blank">
+<!-- <a class="button" href="https://github.com/JyotiGarg-source/Technical-Writing-Portfolio" target="_blank">
 
 View Portfolio
 
-</a>
+</a> -->
 
 
 
 </header>
 
+<!-- Summary -->
 
-
-
-
-<!-- ABOUT -->
-
-
-<section id="about">
+<section id="summary">
 
 
 <h3>
-About Me
+Professional Summary
 </h3>
 
 
 <p>
 
-I am a Senior Technical Writer with 6+ years of IT experience.
-I specialize in creating developer documentation, API documentation,
-knowledge bases and technical content.
+<!-- I am a Senior Technical Writer with 6+ years of experience in software development, production support, and technical documentation. I specialize in creating API documentation, developer guides, user documentation, knowledge bases, release notes, and AI documentation for enterprise software products.
 
+My experience includes collaborating with engineering, QA, product, and business teams to translate complex technical concepts into accurate, easy-to-understand documentation that improves developer experience and product adoption.
+
+I am proficient with documentation tools such as Confluence, Swagger/OpenAPI, Postman, Markdown, Git, VS Code, and Draw.io. I also have hands-on experience with SQL, REST APIs, JSON, SDLC, Agile methodologies, and AI-assisted documentation workflows.
+
+I am passionate about building high-quality documentation that enables developers, customers, and organizations to understand and use technology effectively. -->
+
+
+Senior Technical Writer with 6+ years of IT experience specializing in API documentation, developer documentation, AI documentation, and knowledge management. Experienced in collaborating with cross-functional teams to create accurate, user-focused documentation for enterprise software products. Skilled in REST APIs, Swagger/OpenAPI, Confluence, Markdown, Git, Postman, SQL, and AI-assisted documentation.
 </p>
 
 
-<br>
-
-
-<ul>
-
-<li>API Documentation</li>
-
-<li>Developer Documentation</li>
-
-<li>User Guides</li>
-
-<li>Knowledge Base</li>
-
-<li>Release Notes</li>
-
-<li>AI Documentation</li>
-
-<li>Technical Communication</li>
-
-
-</ul>
-
-
 </section>
 
+<!-- Experience -->
 
-
-
-
-<!-- SKILLS -->
-
-
-<section id="skills">
+<!-- <section id="experience">
 
 
 <h3>
-Skills
+Professional Experience
 </h3>
 
-
-
-<div class="card-container">
+<div class="timeline">
 
 
 
-<div class="card">
+<div class="timeline-item">
+        <div class="experience-header">
 
-<h4>
-Documentation
-</h4>
 
-<br>
+<h4>Senior Technical Writer</h4>
+     <span>June 2025 – Present</span>
+     </div>
 
-<ul>
-
-<li>API Documentation</li>
-
-<li>User Guides</li>
-
-<li>Developer Guides</li>
-
-<li>Release Notes</li>
-
-<li>SOP</li>
-
-<li>Knowledge Base</li>
-
-</ul>
-
+<p>
+    GlobalLogic - Noida, Uttar Pradesh
+</p>
 
 </div>
 
 
-
-
-
-<div class="card">
-
-
-<h4>
-Tools
-</h4>
-
-<br>
-
-
-<ul>
-
-<li>Swagger/OpenAPI</li>
-
-<li>Postman</li>
-
-<li>Confluence</li>
-
-<li>Markdown</li>
-
-<li>Git</li>
-
-<li>VS Code</li>
-
-</ul>
-
-
 </div>
-
-
-
-
-
-<div class="card">
-
-
-<h4>
-Technical Skills
-</h4>
-
-<br>
-
-
-<ul>
-
-<li>SQL</li>
-
-<li>REST APIs</li>
-
-<li>SDLC</li>
-
-<li>AI Documentation</li>
-
-<li>Prompt Engineering</li>
-
-<li>Information Architecture</li>
-
-
-</ul>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- EXPERIENCE -->
-
-
-<section id="experience">
-
-
-<h3>
-Experience
-</h3>
-
-
 
 <div class="timeline">
 
@@ -604,45 +918,298 @@ Experience
 <div class="timeline-item">
 
 <h4>
-GlobalLogic
+    Associate - Development Documentation
+
 </h4>
 
 <p>
-Senior Technical Writer
+Cognizant Technology Solutions - Noida, Uttar Pradesh
 </p>
 
 </div>
+</div>
 
 
+
+<div class="timeline">
 
 <div class="timeline-item">
 
 <h4>
-Cognizant
+    Technical Writer
 </h4>
 
 <p>
-Associate - Technical Documentation
+HCL Technologies Pvt Ltd - Noida, Uttar Pradesh
+
 </p>
 
 </div>
+</div>
 
-
-
+<div class="timeline">
 
 <div class="timeline-item">
 
 <h4>
-HCL Technologies
+    Dotnet Developer
 </h4>
 
 <p>
-Software Engineer
+Paragon IT Services - Delhi
+
 </p>
+
+</div>
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h4>
+    Software Developer Intern
+</h4>
+
+<p>
+Truebodh Pvt ltd - Ghaziabad, Uttar Pradesh
+
+</p>
+
+</div>
+</div>
+
+
+</section> -->
+<!-- Projects -->
+
+<section id="experience">
+
+<h3>Professional Experience</h3>
+
+
+<div class="experience-timeline">
+
+
+<div class="experience-item">
+
+
+<div class="experience-header">
+
+<h4>Senior Technical Writer</h4>
+
+<span class="experience-date">
+Nov 2025 – Present
+</span>
 
 </div>
 
 
+<div class="company">
+GlobalLogic | Noida, Uttar Pradesh
+</div>
+
+
+<ul>
+
+<li>
+Create API documentation, developer guides, and technical content.
+</li>
+
+<li>
+Collaborate with engineering and product teams to understand technical workflows.
+</li>
+
+<li>
+Develop user guides, release notes, and knowledge base articles.
+</li>
+
+</ul>
+
+
+<div class="tools">
+
+Tools: Confluence | Markdown | Swagger | Postman | Git
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="experience-item">
+
+
+<div class="experience-header">
+
+<h4>Associate – Development Documentation</h4>
+
+<span class="experience-date">
+Oct 2023 – Jun 2024
+</span>
+
+</div>
+
+
+<div class="company">
+Cognizant | Noida, Uttar Pradesh
+</div>
+
+
+<ul>
+
+<li>
+Created Technical Design Documents and application documentation.
+</li>
+
+<li>
+Documented .NET applications and enterprise workflows.
+</li>
+
+<li>
+Worked with development teams during SDLC processes.
+</li>
+
+</ul>
+
+
+<div class="tools">
+
+Tools: SQL Server | .NET | BizTalk | MS Word
+
+</div>
+
+
+</div>
+
+
+
+<div class="experience-item">
+
+
+<div class="experience-header">
+
+<h4>Software Engineer</h4>
+
+<span class="experience-date">
+Jul 2021 – Oct 2023
+</span>
+
+</div>
+
+
+<div class="company">
+HCL Technologies | Noida, Uttar Pradesh
+</div>
+
+
+<ul>
+
+<li>
+Provided application support for enterprise banking applications.
+</li>
+
+<li>
+Worked with SQL, PL/SQL, Linux, and ServiceNow.
+</li>
+
+<li>
+Managed production issues and technical troubleshooting.
+</li>
+
+
+</ul>
+
+
+<div class="tools">
+
+Tools: SQL | PL/SQL | Linux | ServiceNow
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h3>Project Highlights</h3>
+
+
+<div class="project-item">
+
+<h4>
+REST API Documentation Guide
+</h4>
+
+<p>
+Created complete API documentation for a sample Student Management API including authentication, endpoints, request/response examples, and error handling.
+</p>
+
+<div class="project-tools">
+Swagger | Postman | Markdown | GitHub
+</div>
+
+</div>
+
+
+
+<div class="project-item">
+
+<h4>
+AI Fundamentals Documentation
+</h4>
+
+<p>
+Created beginner-friendly documentation explaining AI concepts, LLMs, tokens, prompts, and ChatGPT workflows.
+</p>
+
+<div class="project-tools">
+Markdown | GitHub | ChatGPT
+</div>
+
+</div>
+
+
+
+<div class="project-item">
+
+<h4>
+Database Documentation Guide
+</h4>
+
+<p>
+Created database documentation covering schemas, data dictionary, relationships, and SQL examples.
+</p>
+
+<div class="project-tools">
+SQL | Draw.io | Markdown
+</div>
+
+</div>
+
+
+
+<div class="project-item">
+
+<h4>
+AI Automation Workflow Documentation
+</h4>
+
+<p>
+Documented an automation workflow using Make.com with process flow diagrams and step-by-step implementation details.
+</p>
+
+<div class="project-tools">
+Make.com | AI Tools | Documentation
+</div>
 
 </div>
 
@@ -650,21 +1217,12 @@ Software Engineer
 </section>
 
 
-
-
-
-<!-- PORTFOLIO -->
-
-
-<section id="portfolio">
+<!-- <section id="projects">
 
 
 <h3>
-Portfolio
+Project Highlights
 </h3>
-
-
-
 <div class="card-container">
 
 
@@ -680,9 +1238,6 @@ REST APIs, Authentication, Error Codes and OpenAPI examples.
 
 </div>
 
-
-
-
 <div class="card">
 
 <h4>
@@ -695,10 +1250,6 @@ Installation, configuration and integration guides.
 
 </div>
 
-
-
-
-
 <div class="card">
 
 <h4>
@@ -710,20 +1261,61 @@ Step-by-step guides for end users.
 </p>
 
 </div>
+</div>
+</section> -->
+
+<!-- My Work -->
+
+<!-- Documentation Portfolio -->
+
+
+<section id="mywork">
+
+
+<h3>
+Documentation Portfolio
+</h3>
+
+
+<div class="work-section">
 
 
 
+<!-- GitHub Portfolio -->
 
 
-<div class="card">
+<div class="work-item">
+
 
 <h4>
-Database Documentation
+Technical Writing Portfolio Repository
 </h4>
 
+
 <p>
-Database schemas and technical references.
+
+A collection of my technical writing samples including
+API documentation, AI documentation, user guides,
+and technical articles created to demonstrate my documentation skills.
+
 </p>
+
+
+<div class="work-meta">
+
+GitHub Repository | Markdown | Documentation Samples
+
+</div>
+
+
+<a class="work-link"
+href="https://github.com/JyotiGarg-source/Technical-Writing-Portfolio"
+target="_blank">
+
+View GitHub Repository →
+
+</a>
+
 
 </div>
 
@@ -731,15 +1323,40 @@ Database schemas and technical references.
 
 
 
-<div class="card">
+<!-- API Documentation -->
+
+
+<div class="work-item">
+
 
 <h4>
-AI Documentation
+REST API Documentation Sample
 </h4>
 
+
 <p>
-AI concepts, workflows and prompt documentation.
+
+Created developer-focused API documentation covering
+API overview, authentication, endpoints,
+request and response examples, and error handling.
+
 </p>
+
+
+<div class="work-meta">
+
+Tools:
+Swagger | OpenAPI | Postman | Markdown
+
+</div>
+
+
+<a class="work-link" href="#">
+
+View Sample →
+
+</a>
+
 
 </div>
 
@@ -747,15 +1364,122 @@ AI concepts, workflows and prompt documentation.
 
 
 
-<div class="card">
+<!-- AI Documentation -->
+
+
+<div class="work-item">
+
 
 <h4>
-Knowledge Base
+AI Fundamentals Documentation Guide
 </h4>
 
+
 <p>
-FAQs, troubleshooting and support articles.
+
+Created beginner-friendly documentation explaining
+Artificial Intelligence, Large Language Models,
+tokens, prompts, and AI workflows.
+
 </p>
+
+
+<div class="work-meta">
+
+Tools:
+Markdown | GitHub | ChatGPT
+
+</div>
+
+
+<a class="work-link" href="#">
+
+Read Document →
+
+</a>
+
+
+</div>
+
+
+
+
+
+<!-- Database Documentation -->
+
+
+<div class="work-item">
+
+
+<h4>
+Database Documentation Sample
+</h4>
+
+
+<p>
+
+Created database documentation including schema overview,
+data dictionary, table relationships,
+and SQL examples.
+
+</p>
+
+
+<div class="work-meta">
+
+Tools:
+SQL | Draw.io | Markdown
+
+</div>
+
+
+<a class="work-link" href="#">
+
+View Sample →
+
+</a>
+
+
+</div>
+
+
+
+
+
+<!-- Automation Documentation -->
+
+
+<div class="work-item">
+
+
+<h4>
+AI Automation Workflow Documentation
+</h4>
+
+
+<p>
+
+Documented an AI-powered automation workflow using Make.com,
+including workflow diagrams, process steps,
+and implementation details.
+
+</p>
+
+
+<div class="work-meta">
+
+Tools:
+Make.com | AI Tools | Mermaid
+
+</div>
+
+
+<a class="work-link" href="#">
+
+View Documentation →
+
+</a>
+
 
 </div>
 
@@ -766,85 +1490,552 @@ FAQs, troubleshooting and support articles.
 
 </section>
 
+<!-- <section id="mywork">
+
+
+<h3>
+See My Work
+</h3>
+<div class="card-container">
+
+
+<div class="card">
+
+<h4>
+Git Repo
+</h4>
+
+<p>
+</p>
+
+</div>
+
+<div class="card">
+
+<h4>
+Work Samples
+</h4>
+
+<p>
+Installation, configuration and integration guides.
+</p>
+
+</div>
+
+</div>
+</section> -->
+
+
+<!-- Education -->
+
+<section id="education">
+
+
+<h3>
+Education
+</h3>
+
+<div class="timeline">
 
 
 
+<div class="timeline-item">
+<h4>
+Bcom 
+</h4>
 
-<!-- CERTIFICATIONS -->
+<p>
+IGNOU University, Delhi | 2015 - 2018
+</p>
+
+</div>
+</div>
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+<h4>
+GNIIT IT Diploma course
+</h4>
+
+<p>
+NIIT | 2015 - 2018
+</p>
+
+</div>
+</div>
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+<h4>
+MBA 
+</h4>
+
+<p>
+DR. D.Y. Patil University, Pune | 2024 - 2026
+</p>
+
+</div>
+</div>
+
+</section>
 
 
 <section id="certifications">
 
+<h3>Certifications</h3>
 
+<div class="card-container">
+
+    <!-- Certificate 1 -->
+
+    <div class="cert-card">
+
+        <h4>Microsoft Azure Data Fundamentals (DP-900)</h4>
+
+        <div class="cert-org">
+            Microsoft
+        </div>
+
+        <div class="cert-year">
+            Earned: 2025
+        </div>
+
+        <!-- Later add certificate link -->
+
+        <!--
+        <a href="#" class="cert-btn" target="_blank">
+            View Certificate
+        </a>
+        -->
+
+    </div>
+
+
+
+    <!-- Certificate 2 -->
+
+    <div class="cert-card">
+
+        <h4>Generative AI Learning</h4>
+
+        <div class="cert-org">
+            Self Learning
+        </div>
+
+        <div class="cert-year">
+            Ongoing
+        </div>
+
+    </div>
+
+
+
+    <!-- Certificate 3 -->
+
+    <div class="cert-card">
+
+        <h4>Prompt Engineering</h4>
+
+        <div class="cert-org">
+            Self Learning
+        </div>
+
+        <div class="cert-year">
+            Ongoing
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- <section>
 <h3>
 Certifications
 </h3>
 
+<div class="card-container">
 
-<ul>
+<div class="card">
+   Microsoft Azure Data Fundamentals
 
-<li>
-Microsoft Azure Data Fundamentals
-</li>
+</div>
+
+<div class="card">
+
+        Generative AI Learning
+
+</div>
+</div>
 
 
-<li>
-Generative AI Learning
-</li>
+</section> -->
 
+<section>
+<h3>
+Core Skills
+</h3>
 
-</ul>
+<div class="skills-container">
+
+<div class="skill-badge">Technical Writing</div>
+
+<div class="skill-badge">API Documentation</div>
+
+<div class="skill-badge">Developer Documentation</div>
+
+<div class="skill-badge">Technical Documentation</div>
+
+<div class="skill-badge">User Documentation</div>
+
+<div class="skill-badge">Product Documentation</div>
+
+<div class="skill-badge">Knowledge Base</div>
+
+<div class="skill-badge">Release Notes</div>
+
+<div class="skill-badge">REST APIs</div>
+
+<div class="skill-badge">OpenAPI</div>
+
+<div class="skill-badge">Swagger</div>
+
+<div class="skill-badge">Information Architecture</div>
+
+<div class="skill-badge">Content Strategy</div>
+
+<div class="skill-badge">Documentation Planning</div>
+
+<div class="skill-badge">Technical Editing</div>
+
+<div class="skill-badge">Prompt Engineering</div>
+
+<div class="skill-badge">AI Documentation</div>
+
+<div class="skill-badge">SDLC</div>
+
+<div class="skill-badge">Agile</div>
+
+<div class="skill-badge">Scrum</div>
+
+<div class="skill-badge">Technical Communication</div>
+
+<div class="skill-badge">Stakeholder Collaboration</div>
+
+<div class="skill-badge">Research</div>
+
+<div class="skill-badge">Knowledge Management</div>
+
+</div>
+
+<!-- <div class="card-container">
+
+<div class="card">
+   
+
+</div>
+
+</div> -->
 
 
 </section>
 
+<section id="tools">
 
+<h3>Technical Tools</h3>
+
+<div class="card-container">
+
+    <div class="card">
+
+        <h4>📚 Documentation</h4>
+
+        <div class="skills-container">
+
+            <div class="skill-badge">Confluence</div>
+            <div class="skill-badge">Markdown</div>
+            <div class="skill-badge">Microsoft Word</div>
+            <div class="skill-badge">Draw.io</div>
+            <div class="skill-badge">Mermaid</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h4>🔗 API & Development</h4>
+
+        <div class="skills-container">
+
+            <div class="skill-badge">Swagger</div>
+            <div class="skill-badge">OpenAPI</div>
+            <div class="skill-badge">Postman</div>
+            <div class="skill-badge">REST API</div>
+            <div class="skill-badge">Git</div>
+            <div class="skill-badge">GitHub</div>
+            <div class="skill-badge">VS Code</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h4>🗄 Databases</h4>
+
+        <div class="skills-container">
+
+            <div class="skill-badge">SQL</div>
+            <div class="skill-badge">SQL Server</div>
+            <div class="skill-badge">Oracle</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h4>🤖 AI Tools</h4>
+
+        <div class="skills-container">
+
+            <div class="skill-badge">ChatGPT</div>
+            <div class="skill-badge">Claude</div>
+            <div class="skill-badge">Gemini</div>
+            <div class="skill-badge">GitHub Copilot</div>
+            <div class="skill-badge">Make.com</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h4>📋 Project Management</h4>
+
+        <div class="skills-container">
+
+            <div class="skill-badge">Jira</div>
+            <div class="skill-badge">GitHub</div>
+            <div class="skill-badge">Agile</div>
+            <div class="skill-badge">Scrum</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h4>💻 Programming & Formats</h4>
+
+        <div class="skills-container">
+
+            <div class="skill-badge">HTML</div>
+            <div class="skill-badge">JSON</div>
+            <div class="skill-badge">XML</div>
+            <div class="skill-badge">Markdown</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- <section>
+<h3>
+Technical Tools
+</h3>
+
+<div class="card-container">
+
+<div class="card">
+
+    <h4>
+Documentation Tools
+</h4>
+
+<br>
+
+<ul>
+
+<li>Confluence</li>
+
+<li>Markdown</li>
+
+<li>Microsoft Word</li>
+
+<li>Draw.io</li>
+
+
+</ul>
+
+</div>
+
+<div class="card">
+
+    <h4>
+API & Development Tools
+</h4>
+
+<br>
+
+<ul>
+
+<li>Swagger / OpenAPI</li>
+
+<li>Postman</li>
+
+<li>Git / GitHub</li>
+
+<li>Visual Studio Code (VS Code)</li>
+
+
+</ul>
+
+</div>
+
+<div class="card">
+
+    <h4>
+Databases
+</h4>
+
+<br>
+
+<ul>
+
+<li>SQL</li>
+
+<li>SQL Server</li>
+
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+</section> -->
 
 
 
 <!-- CONTACT -->
-
-
 <section id="contact">
+
+<h3>Get In Touch</h3>
+
+<p>
+I'm always open to discussing Technical Writing, API Documentation,
+AI Documentation, freelance opportunities, and full-time roles.
+</p>
+
+<br>
+
+<div class="contact-grid">
+
+    <div class="contact-card">
+
+        <h4>Email</h4>
+
+        <p>
+
+            <a href="mailto:jyoti.garg.career@gmail.com">
+
+                jyoti.garg.career@gmail.com
+
+            </a>
+
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-card">
+
+        <h4>LinkedIn</h4>
+
+        <p>
+
+            <a href="https://www.linkedin.com/in/jyoti-garg-aa12151b3/" target="_blank">
+
+                linkedin.com/in/jyoti-garg-aa12151b3
+
+            </a>
+
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-card">
+
+        <h4>GitHub</h4>
+
+        <p>
+
+            <a href="https://github.com/JyotiGarg-source" target="_blank">
+
+                github.com/JyotiGarg-source
+
+            </a>
+
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-card">
+
+        <h4>Location</h4>
+
+        <p>
+
+            New Delhi, India
+
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- <section id="contact">
 
 
 <h3>
 Contact
 </h3>
 
-
-
 <p>
-
-GitHub:
-
-<a href="https://github.com/JyotiGarg-source" target="_blank">
-
-JyotiGarg-source
-
-</a>
-
-
++91 9958803879
 </p>
 
-
-
-<br>
-
-
 <p>
-
-Portfolio:
-
-<a href="https://github.com/JyotiGarg-source/Technical-Writing-Portfolio" target="_blank">
-
-Technical Writing Portfolio
-
-</a>
-
-
+jyoti.garg.career@gmail.com
 </p>
 
+<p>
+New Delhi, India
+</p>
 
 
 <br>
@@ -865,10 +2056,7 @@ LinkedIn Profile
 
 
 
-</section>
-
-
-
+</section> -->
 
 
 <footer>
@@ -878,9 +2066,5 @@ LinkedIn Profile
 
 
 </footer>
-
-
-
-</body>
 
 </html>
